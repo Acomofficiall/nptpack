@@ -1,4 +1,4 @@
-from moviepy.editor import VideoFileClip, AudioFileClip
+from moviepy import VideoFileClip, AudioFileClip
 import os
 
 def mp4_to_mp3(girdi_dosyasi):
