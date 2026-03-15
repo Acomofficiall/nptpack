@@ -19,8 +19,7 @@ def netcam_baslat():
     recording = False
     out = None
 
-    print(f"[!] {platform.system()} üzerinde NetCam Aktif!")
-    print("F: Foto | V: Kayıt Başlat/Durdur | Q: Çıkış")
+    
 
     while True:
         ret, frame = cap.read()
@@ -29,7 +28,7 @@ def netcam_baslat():
         # Arayüz Bilgisi
         status = "KAYITTA" if recording else "HAZIR"
         color = (0, 0, 255) if recording else (0, 255, 0)
-        cv2.putText(frame, f"OS: {platform.system()} | {status}", (10, 30), 
+        cv2.putText(frame, f"F: Foto | V: Kayıt Başlat/Durdur | Q: Çıkış\n{status}", (10, 30), 
                     cv2.FONT_HERSHEY_SIMPLEX, 0.6, color, 2)
 
         cv2.imshow('A.net NetCam Pro', frame)
